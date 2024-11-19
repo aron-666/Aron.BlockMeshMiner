@@ -1,4 +1,4 @@
-![Total Visitors](https://komarev.com/ghpvc/?username=aron-666miner&color=green)
+![Total Visitors](https://komarev.com/ghpvc/?username=aron-666blockmeshminer&color=green)
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/aron-666/Aron.BlockMeshMiner/blob/master/Readme.en.md)
 [![中文](https://img.shields.io/badge/lang-中文-blue.svg)](https://github.com/aron-666/Aron.BlockMeshMiner)
@@ -7,18 +7,9 @@
 使用.Net 8撰寫
 
 
-## 好用請支持，使用我的推薦碼註冊: RI3NGc63lVmUQix
-[立即註冊 app.getgrass.io](https://app.getgrass.io/register/?referralCode=RI3NGc63lVmUQix)
+## 好用請支持，使用我的推薦碼註冊: c7a6c248-f315-4401-acb1-163fe25a1375
+[立即註冊 app.blockmesh.xyz](https://app.blockmesh.xyz/register?invite_code=c7a6c248-f315-4401-acb1-163fe25a1375)
 
-Grass 目前場外(未上市)價格來到 1:0.001USDT
-
-掛滿一天可以挖1800顆 等於一天1.8USDT
-
-Grass挖礦不吃硬體，吃少許流量(每秒10-30KB)，就可以進行挖礦。
-
-將來上市交易所，積分可直接換成加密貨幣。
-
-別人的介紹: https://www.binance.com/zh-TC/feed/post/1783966376178
 
 ## 執行畫面
 1. 登入
@@ -35,18 +26,24 @@ Grass挖礦不吃硬體，吃少許流量(每秒10-30KB)，就可以進行挖礦
 
 2. 編輯 docker-compose.yml (在程式碼的docker-install資料夾內)
    ```
-   GRASS_USER=你的 Grass 帳號
-   GRASS_PASS=你的 Grass 密碼
-   ADMIN_USER=後臺管理帳號(自訂義)
-   ADMIN_PASS=後臺管理密碼(自訂義)
-   IS_COMMUNITY=false (若要使用社區節點，請改為true)
-   PROXY_ENABLE=true # false
-   PROXY_HOST=http(s)://host:port
-   PROXY_USER=user
-   PROXY_PASS=pass
+   version: '1'
+   services:
+      blockmesh:
+         image: aron666/blockmesh
+         environment:
+            - BM_EMAIL=email
+            - BM_PASS=password
+            - ADMIN_USER=admin
+            - ADMIN_PASS=admin
+            - PROXY_ENABLE=true / false
+            - PROXY_HOST=http(s)://host:port
+            - PROXY_USER=user
+            - PROXY_PASS=pass
+         ports:
+            - 5004:50004
    ```
 
-   - Port 5001 會在你電腦上開一個 Port，要讓區網連請開防火牆 Port 5001
+   - Port 5004 會在你電腦上開一個 Port，要讓區網連請開防火牆 Port 5004
 
 3. 執行
    ```
@@ -57,22 +54,9 @@ Grass挖礦不吃硬體，吃少許流量(每秒10-30KB)，就可以進行挖礦
    ```
    再來就可以用網址看後臺狀態了
 
-   - 本機: [http://localhost:5001](http://localhost:5001)
-   - 其他設備: 先開 cmd 打 `ipconfig`/`ifconfig` 找到你的區網 IP [http://IP:5001](http://IP:5001)
+   - 本機: [http://localhost:5004](http://localhost:5004)
+   - 其他設備: 先開 cmd 打 `ipconfig`/`ifconfig` 找到你的區網 IP [http://IP:5004](http://IP:5004)
      - 關掉網頁還會繼續執行
      - Windows 要開機自動執行要去Docker Desktop設定改
 
-## 2. 作為服務安裝
-1. Windows 已更新，請至Release下載，說明之後再補。
-2. Linux 即將更新
 
-## 更新日誌
-2024-03-18: 增加UI資訊/修復登入功能/美化UI(我前端就爛)
-
-2024-03-18: 加入版本更新提醒/Proxy設定
-
-2024-05-04: 更新擴充
-
-2024-06-25: 更新社區節點(須設定環境變數)
-
-2024-07-24  更新社區節點/修正登入緩慢問題/修改UI
