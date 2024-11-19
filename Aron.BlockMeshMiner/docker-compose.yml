@@ -1,10 +1,10 @@
 version: '1'
 services:
-  nodepay:
-    image: aron666/nodepay
-    container_name: nodepay
+  blockmesh:
+    image: aron666/blockmesh
     environment:
-      - NP_TOKEN=token
+      - BM_EMAIL=email
+      - BM_PASS=password
       - ADMIN_USER=admin
       - ADMIN_PASS=admin
     ports:
