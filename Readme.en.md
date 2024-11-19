@@ -6,7 +6,7 @@
 # Aron.BlockMeshMiner
 Written in .Net 8
 
-## If you find it useful, support me by using my referral code: RI3NGc63lVmUQix
+## If you find it useful, support me by using my referral code: c7a6c248-f315-4401-acb1-163fe25a1375
 [Register Now at app.blockmesh.xyz](https://app.blockmesh.xyz/register?invite_code=c7a6c248-f315-4401-acb1-163fe25a1375)
 
 
