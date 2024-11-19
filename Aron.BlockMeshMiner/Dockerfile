@@ -10,7 +10,7 @@ RUN dotnet publish "Aron.BlockMeshMiner.csproj" -c $BUILD_CONFIGURATION -o /app/
 
 # 使用較小的運行時基礎映像
 FROM debian:bullseye-20240722-slim AS final
-EXPOSE 50003/tcp
+EXPOSE 50004/tcp
 ENV ASPNETCORE_HTTP_PORTS 50004
 WORKDIR /app
 
